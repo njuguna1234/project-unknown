@@ -1,11 +1,14 @@
 import React from 'react';
-import ReactPlayer from 'react-player';
 
 const VideoPlayer = ({ video }) => {
   return (
-    <div>
-      <h2 className="text-xl font-bold mb-2">{video.title}</h2>
-      <ReactPlayer url={`http://127.0.0.1:5000${video.url}`} controls width="100%" />
+    <div className="bg-black p-4 rounded-md shadow">
+      <h2 className="text-white text-xl font-bold mb-2">{video.title}</h2>
+      <video
+        controls
+        src={`http://127.0.0.1:5000${video.url}`}
+        className="w-full h-64"
+      />
     </div>
   );
 };
